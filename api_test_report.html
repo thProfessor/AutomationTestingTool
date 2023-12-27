@@ -1,0 +1,50 @@
+<!-- report_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Test Report</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div id="dataset" style="display: none;">[{'Endpoint': 'https://jsonplaceholder.typicode.com/posts/1', 'ResponseTime': '0.5960221290588379 sec', 'Status': 'Passed', 'ResponseValidation': 'Content validation passed', 'Timestamp': '2023-12-27 15:49:30'}, {'Endpoint': 'https://jsonplaceholder.typicode.com/posts', 'ResponseTime': 'Failed - too slow 1.0200200080871582 greater than 1.0', 'Status': 'Passed', 'ResponseValidation': 'Invalid JSON structure in ResponseValidation', 'Timestamp': '2023-12-27 15:49:31'}]</div>
+  <h1>API Test Report</h1>
+  <div id="chart-container">
+    <canvas id="resultsChart"></canvas>
+  </div>
+  <div class="table-wrapper">
+    <table class="fl-table">
+      <tr>
+        <th>Endpoint</th>
+        <th>Response Time</th>
+        <th>Status</th>
+        <th>Response</th>
+        <th>Timestamp</th>
+      </tr>
+      
+      <tr>
+        <td id="endpoint">https://jsonplaceholder.typicode.com/posts/1</td>
+        <td id="response_time">0.5960221290588379 sec</td>
+        <td id="status">Passed</td>
+        <td style="word-wrap:break-word" id="response">Content validation passed</td>
+        <td id="current_time">2023-12-27 15:49:30</td>
+      </tr>
+      
+      <tr>
+        <td id="endpoint">https://jsonplaceholder.typicode.com/posts</td>
+        <td id="response_time">Failed - too slow 1.0200200080871582 greater than 1.0</td>
+        <td id="status">Passed</td>
+        <td style="word-wrap:break-word" id="response">Invalid JSON structure in ResponseValidation</td>
+        <td id="current_time">2023-12-27 15:49:31</td>
+      </tr>
+      
+    </table>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

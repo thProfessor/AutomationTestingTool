@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Testing</title>
+</head>
+
+<body>
+  <h1>API Testing</h1>
+  {% if error %}
+  <p style="color: red;">{{ error }}</p>
+  {% endif %}
+  {% if success %}
+  <p style="color: green;">{{ success }}</p>
+  {% endif %}
+  <form method="post" enctype="multipart/form-data">
+    <label for="file">Choose a spreadsheet file (.csv):</label>
+    <input type="file" name="file" accept=".csv" required>
+    <br>
+    <input type="submit" value="Run API Tests">
+  </form>
+</body>
+
+</html>
